@@ -28,8 +28,7 @@ from utils.audioprep import process_signal
 from utils.s2f0 import load_F0_models, wav2F0
 from pesq import pesq
 import nemo.collections.asr as nemo_asr
-     
-    
+
 class StreamableModel(pl.LightningModule):
     def __init__(
         self,
@@ -48,7 +47,7 @@ class StreamableModel(pl.LightningModule):
         lr: float = 1e-6,
         b1: float = 0.5,
         b2: float = 0.9,
-        dataset: str = 'ljspeech',
+        dataset: str = 'combinedWhisper',
         reen_nn_type: str = 'adapt',
         feature_type: str = 'mfcc',
         trainable: bool = True,
